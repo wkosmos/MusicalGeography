@@ -15,11 +15,6 @@ headers = {'Content-Type' : 'application/json'}
 
 
 
-
-def get_genres():
-    pass
-
-
 def get_top_tracks_from_genre(genre):
     pass
 
