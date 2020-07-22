@@ -15,20 +15,27 @@ headers = {'Content-Type' : 'application/json'}
 
 
 
-def get_top_tracks_from_genre(genre):
-    pass
+def get_top_tracks_from_genre(genre: str, offset=0, limit=50):
+    """Search via spotipy within specific genre.
+    Args:
+    
+    Returns:
+    """
+    query = 'genre:' + genre
+    response = sp.search(q=query, type='track', offset=offset, limit=limit)
+
+    return response
 
 
 def get_multiple_tracks(ids):
-    """Send GET request to API for info on each track ID given.
+    """Send GET request to API via spotipy info on each track ID given.
     Args:
 
     Returns:
 
     """
 
-    data = ''
-    url = 'https://api.spotify.com/v1/tracks'
-    response = requests.get(url, headers=headers, data=data)
+    
+    pass
 
-    return response
+print(get_top_tracks_from_genre('jazz'))
