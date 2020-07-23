@@ -10,7 +10,6 @@
 2. [Data](#Data)
     - [Acquisition](#Acquisition)
     - [Exploration](#Exploration)
-<!-- dists of spotify metrics -->
     - [Cleaning/Organization](#Cleaning/Organization)
     
 3. [Analysis](#Analysis)
