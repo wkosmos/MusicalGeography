@@ -1,0 +1,12 @@
+* Thursday
+** Mandatory
+*** TODO Outline README.md based on some previous cap1s
+*** TODO Presentation section on data acquisition
+*** TODO Notebook EDA of Spotify metrics
+**** TODO dists of metrics
+**** TODO comparisons of subjective vs objective metrics
+*** TODO Notebook EDA of geographic data
+**** TODO Plot artist birth country on map
+**** TODO histogram of birth country vs spotify metrics
+**** TODO t test, pearsonr of spotify metrics of various birth countries
+*** TODO Plot a 2 notable spotify metrics by birth country on map
