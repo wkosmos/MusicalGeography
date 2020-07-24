@@ -14,6 +14,7 @@
         - [ArcGIS Hub](#ArcGIS-Hub)
         - [Worldbank](#Worldbank)
     - [Exploration](#Exploration)
+        - [Intuitiveness of Metrics](#Intuitiveness-of-Metrics)
     - [Cleaning/Organization](#Cleaning/Organization)
     
 3. [Analysis](#Analysis)
@@ -53,11 +54,65 @@ The project proposal included plans to source geographic microdata (population, 
 ## Exploration
 
 After the Spotify dataset was read into a pandas DataFrame, the distribution of each numerical column was plotted:
-![](https://github.com/wkosmos/MusicalGeography/images/)
+![distributions of numerical columns](https://github.com/wkosmos/MusicalGeography/blob/master/images/dists%20of%20numeric%20columns.png)
+
+_**Note:**_  <br> **Popularity**, **acousticness**, and **valence** seemed to have more extreme values than expected, possibly due to some sort of threshold in Spotify's calculation of these metrics.
+
+### Intuitiveness of Metrics
+Spotify's description of of the subjective metrics **danceability**, **energy**, and **valence** are a bit too vague to form a confident idea of what they measure, so some comparisons were necessary to gauge their intuitiveness. 
+
+<br>
+
+**Spotify API Docs Definitions:**
+
+_**Danceability**  describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity._
+
+_**Energy** is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy._
+
+_**Valence** is measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry)._
+
+<br>
+
+First, each subjective metric was plotted against two objective metrics: **tempo** and **loudness**.
+
+![danceability vs tempo and loudness](https://github.com/wkosmos/MusicalGeography/blob/master/images/danceability%20vs%20objectives.png)
+
+<br>
+
+- Spotify appeared to be treating the 100-150 bpm range as the most danceable, which is roughly intuitive if it's assumed that people don't want to dance either too slow or too fast.
+- High danceability appearing to coincide with high loudness fit with the typical idea of dance music.
+
+![energy vs tempo and loudness](https://github.com/wkosmos/MusicalGeography/blob/master/images/energy%20vs%20objectives.png)
+
+<br>
+
+- Energy appeared to have a very rough positive association with tempo.
+- Energy had a strong positive association with loudness, which makes intuitive sense and suggests that loudness might have been used in the calculation of energy.
+
+![valence vs tempo and loudness](https://github.com/wkosmos/MusicalGeography/blob/master/images/valence%20vs%20objectives.png)
+
+<br>
+
+- Valence had nearly no association with tempo or loudness other than a slightly wider range of loudness values being present at 0 and 1 valence, which was likely due to the significantly larger number of tracks with these valence values.
+
+<br>
+
+The three subjective metrics were also plotted against each other, and appeared to all have a rough positive association.
+
+![danceability vs energy vs valence](https://github.com/wkosmos/MusicalGeography/blob/master/images/subjectives%20comparisons.png)
+
+<br>
+
+Finally, five illustrative genres were chosen and the density distribution of the three subjective metrics was plotted for each.
+
+![five genres danceability energy valence](https://github.com/wkosmos/MusicalGeography/blob/master/images/5%20genres%20subjectives.png)
+
+<br>
+
+[Back to top](#Contents)
 
 
 ## Cleaning/Organization
-checking if any artists were outliers in num of songs or on other metrics
 
 [Back to top](#Contents)
 # Analysis
