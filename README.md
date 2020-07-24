@@ -144,11 +144,12 @@ To get a sense of how skewed the analysis might be, I checked how many artists i
 # Discussion
 
 ## Conclusion
-- 
+- All three of Spotify's subjective metrics appear to show association with the birthplace of the artist, and deeper investigation seems worthwhile.
 
 ## Notes
+- Artist birthplace is a flawed metric, in that it doesn't account for artists who have moved since birth, or for societal influences at a smaller than national level. This could be weighed a bit by getting data on what percentage of a country's population was born there.
+- Future interesting analyses could include investigation of the association of various cultural diasporas (esp. African) with Spotify's metrics
 
-## Future Plans
 
 
 ## Resources/References
@@ -163,4 +164,5 @@ Data used in this analysis were sourced from:
 
 <br>
 
-**[COUNTRY CODES]**(https://gist.github.com/tadast/8827699)
+**[Country Codes]**(https://gist.github.com/tadast/8827699)
+- ISO Alpha-2 and ISO Alpha-3 country code matches
