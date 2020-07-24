@@ -9,6 +9,10 @@
 
 2. [Data](#Data)
     - [Acquisition](#Acquisition)
+        - [Spotify](#Spotify)
+        - [MusicBrainz](#MusicBrainz)
+        - [ArcGIS Hub](#ArcGIS-Hub)
+        - [Worldbank](#Worldbank)
     - [Exploration](#Exploration)
     - [Cleaning/Organization](#Cleaning/Organization)
     
@@ -29,15 +33,27 @@
 Many factors in a person's life might influence what kind of music they create, but many are subjective and difficult to find (like individual personal factors/experiences/feelings).
 For this exploratory analysis a few ubiquitous factors were chosen for a zoomed-out view of the relationship between personal situation and musical attributes.
 
+[Back to top](#Contents)
 # Data
-
+Data sources: Spotify API (musical data), MusicBrainz API (artist data), ArcGIS Hub (shapefiles), Worldbank (geographic microdata), and Github (country codes).
 ## Acquisition
+### Spotify
+Based on the project proposal the original plan was to build a Python wrapper for Spotify's API in order to perform specific granular requests, but this was later abandoned as unnecessary as a 3rd party API wrapper for Python already exists ([Spotipy](https://github.com/plamere/spotipy)).
+### MusicBrainz
+MusicBrainz is an open database of aggregated music metadata, and was needed because Spotify doesn't store any personal information about each artist. For this project MusicBrainz' Python API wrapper [MusicBrainzngs](https://pypi.org/project/musicbrainzngs/) was used to search for each artist's name and get the birth country from the top result. 
+### ArcGIS Hub
+Originally a world countries shapefile from ArcGIS Hub was used for generating maps, but later in the project was replaced with Geopandas in-built `natralearth_lowres` dataset for simplicty.
+### Worldbank
+The project proposal included plans to source geographic microdata (population, education, health indicators, income, etc.) from Worldbank, but this was removed from the scope due to time constraints.
+
+<br>
 
 ## Exploration
 
 ## Cleaning/Organization
 checking if any artists were outliers in num of songs or on other metrics
 
+[Back to top](#Contents)
 # Analysis
 
 ## Spotify Metrics
@@ -71,5 +87,7 @@ Data used in this analysis were sourced from:
 
 **[MusicBrainz API](https://python-musicbrainzngs.readthedocs.io/en/v0.7.1/)**
 - Artist birthplace
+
+<br>
 
 **[COUNTRY CODES]**(https://gist.github.com/tadast/8827699)
