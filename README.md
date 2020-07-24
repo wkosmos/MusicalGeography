@@ -26,7 +26,6 @@
 4. [Discussion](#Discussion)
     - [Conclusion](#Conclusion)
     - [Notes](#Notes)
-    - [Future Plans](#Future-Plans)
 
 5. [Resources/Reference](#Resources/Reference)
 
@@ -153,7 +152,7 @@ To get a sense of how skewed the analysis might be, I checked how many artists i
 
 
 ## Resources/References
-Data used in this analysis were sourced from:
+Data used in this analysis were sourced from:  
 **[Spotify API](https://gstudents.slack.com/archives/G015L65AESW/p1595461894242200)**
 - Musical data - tempo, popularity, acousticness, danceability, energy, instrumentalness, loudness, liveness, speechiness, valence
 
