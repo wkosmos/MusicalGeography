@@ -121,6 +121,8 @@ def get_all_birthplaces(in_list, filepath, debug=False):
 
         for i in birthplace_dict_list:
             writer.writerow(i)
+
+# def load_birthplace_csv()
         
 
 
@@ -139,9 +141,19 @@ if __name__ == "__main__":
 
     # get_all_birthplaces(artists_list, 'birthplaces.csv', debug=True)
 
-    birthplace_list = [get_artist_birthplace(artist, debug=True)[1] for artist in artists_array]
+    artist_df = pd.DataFrame(artists_array, columns=['name'])
+    birthplace_df = pd.read_csv('data/birthplaces.csv')
 
-    df['artist_birthplace'] = birthplace_list
+    artist_birthplace_df = artist_df.merge(birthplace_df)
+
+    artist_birthplace_df.info()
+
+    artist_birthplace_df.to_csv('data/artist_birthplace.csv')
+
+    artist_birthplace_df.info()
+
+
+    # artist_df['artist_birthplace'] = birthplace_list
 
     # name_accuracy_list = [compare_query_to_result(artists_array[i]) for i in range(len(artists_array))]
     # name_accuracy = pd.DataFrame()
