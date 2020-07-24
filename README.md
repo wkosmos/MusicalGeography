@@ -42,13 +42,19 @@ Based on the project proposal the original plan was to build a Python wrapper fo
 ### MusicBrainz
 MusicBrainz is an open database of aggregated music metadata, and was needed because Spotify doesn't store any personal information about each artist. For this project MusicBrainz' Python API wrapper [MusicBrainzngs](https://pypi.org/project/musicbrainzngs/) was used to search for each artist's name and get the birth country from the top result. 
 ### ArcGIS Hub
-Originally a world countries shapefile from ArcGIS Hub was used for generating maps, but later in the project was replaced with Geopandas in-built `natralearth_lowres` dataset for simplicty.
+Originally a world countries shapefile from ArcGIS Hub was used for generating maps, but later in the project was replaced with Geopandas in-built `naturalearth_lowres` dataset for simplicty.
 ### Worldbank
 The project proposal included plans to source geographic microdata (population, education, health indicators, income, etc.) from Worldbank, but this was removed from the scope due to time constraints.
 
 <br>
 
+[Back to top](#Contents)
+
 ## Exploration
+
+After the Spotify dataset was read into a pandas DataFrame, the distribution of each numerical column was plotted:
+![](https://github.com/wkosmos/MusicalGeography/images/)
+
 
 ## Cleaning/Organization
 checking if any artists were outliers in num of songs or on other metrics
