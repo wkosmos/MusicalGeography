@@ -41,7 +41,8 @@ Data sources: Spotify API (musical data), MusicBrainz API (artist data), ArcGIS 
 ### Spotify
 Based on the project proposal the original plan was to build a Python wrapper for Spotify's API in order to perform specific granular requests, but this was later abandoned as unnecessary as a 3rd party API wrapper for Python already exists ([Spotipy](https://github.com/plamere/spotipy)).
 ### MusicBrainz
-MusicBrainz is an open database of aggregated music metadata, and was needed because Spotify doesn't store any personal information about each artist. For this project MusicBrainz' Python API wrapper [MusicBrainzngs](https://pypi.org/project/musicbrainzngs/) was used to search for each artist's name and get the birth country from the top result. 
+MusicBrainz is an open database of aggregated music metadata, and was needed because Spotify doesn't store any personal information about each artist. For this project MusicBrainz' Python API wrapper [MusicBrainzngs](https://pypi.org/project/musicbrainzngs/) was used to search for each artist's name and write the birth country from the top result to a csv file.
+
 ### ArcGIS Hub
 Originally a world countries shapefile from ArcGIS Hub was used for generating maps, but later in the project was replaced with Geopandas in-built `naturalearth_lowres` dataset for simplicty.
 ### Worldbank
@@ -103,7 +104,7 @@ The three subjective metrics were also plotted against each other, and appeared 
 
 <br>
 
-Finally, five illustrative genres were chosen and the density distribution of the three subjective metrics was plotted for each.
+Finally, five illustrative genres were chosen and the density distribution of the three subjective metrics was plotted for each. These distributions mostly aligned with expectations of the genres.
 
 ![five genres danceability energy valence](https://github.com/wkosmos/MusicalGeography/blob/master/images/5%20genres%20subjectives.png)
 
@@ -113,9 +114,22 @@ Finally, five illustrative genres were chosen and the density distribution of th
 
 
 ## Cleaning/Organization
+The Spotify dataset was very clean as acquired, though only 11 of the 18 columns were used.  
+Of the 14565 unique artists in the dataset, 9141 had a birth country value found via the MusicBrainz API, so it was only these which could be included in the later analysis of music metrics by birth country.
+
+#### Country Codes
+Unfortunately, the MusicBrainz database stores country codes in the ISO Alpha-2 format (2-length string), while the geopandas `naturalearth_lowres` dataframe contains country codes only in the ISO- Alpha-3 format (3-length string).  
+A csv including both ISO-a2 and ISO-a3 country codes was found on Github, and this was loaded into pandas and merged into the world dataframe.  
+
+Once the country codes in the geopandas dataframe matched those sourced from MusicBrainz columns could be added with counts and means of columns from the Spotify dataset.
+
 
 [Back to top](#Contents)
 # Analysis
+
+## 
+
+
 
 ## Spotify Metrics
 spotify metrics by genre
