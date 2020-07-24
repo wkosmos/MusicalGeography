@@ -71,3 +71,5 @@ Data used in this analysis were sourced from:
 
 **[MusicBrainz API](https://python-musicbrainzngs.readthedocs.io/en/v0.7.1/)**
 - Artist birthplace
+
+**[COUNTRY CODES]**(https://gist.github.com/tadast/8827699)
