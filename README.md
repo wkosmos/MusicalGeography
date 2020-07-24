@@ -18,9 +18,10 @@
     - [Cleaning/Organization](#Cleaning/Organization)
     
 3. [Analysis](#Analysis)
-    - [Spotify Metrics](#Spotify-Metrics)
-    - [Artist Birthplace](#Artist-Birthplace)
-    - [Choice of Compelling Metrics](#Choice-of-Compelling-Metrics)
+    - [Artists per Country](#Artists-per-Country)
+    - [Danceability by Country](#Danceability)
+    - [Energy by Country](#Energy)
+    - [Valence by Country](#Valence)
     
 4. [Discussion](#Discussion)
     - [Conclusion](#Conclusion)
@@ -127,26 +128,23 @@ Once the country codes in the geopandas dataframe matched those sourced from Mus
 [Back to top](#Contents)
 # Analysis
 
-## 
+## Artists per Country
+To get a sense of how skewed the analysis might be, I checked how many artists in the dataset were from each country. This plot ended up being so USA-skewed I had to use a log scale,
+![num artists per country](https://github.com/wkosmos/MusicalGeography/blob/master/images/artist%20count%20by%20country.png)
 
+## Danceability
+![danceability by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/danceability%20vs%20birthplace_1.png)
 
+## Energy
+![energy by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/energyvs%20birthplace.png)
 
-## Spotify Metrics
-spotify metrics by genre
-testing intuition of energy, danceability, valence:
-energy vs tempo, loudness
-danceability vs tempo, loudness, 
-valence vs tempo, loudness
-energy, valence, danceability vs each other
-
-
-## Artist Birthplace
-
-## Choice of compelling metrics
+## Valence
+![valence by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/valence%20vs%20birthplace_1.png)
 
 # Discussion
 
 ## Conclusion
+- 
 
 ## Notes
 
