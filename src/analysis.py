@@ -101,6 +101,7 @@ def get_all_birthplaces(in_list, filepath, debug=False):
     No return.
     """
     birthplace_dict_list = []
+    
     for i in range(len(in_list)):
         birthplace_dict = {}
         artist = in_list[i]
