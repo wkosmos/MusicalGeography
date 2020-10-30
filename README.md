@@ -18,14 +18,14 @@
     - [Cleaning/Organization](#Cleaning/Organization)
     
 3. [Analysis](#Analysis)
-    - [Spotify Metrics](#Spotify-Metrics)
-    - [Artist Birthplace](#Artist-Birthplace)
-    - [Choice of Compelling Metrics](#Choice-of-Compelling-Metrics)
+    - [Artists per Country](#Artists-per-Country)
+    - [Danceability by Country](#Danceability)
+    - [Energy by Country](#Energy)
+    - [Valence by Country](#Valence)
     
 4. [Discussion](#Discussion)
     - [Conclusion](#Conclusion)
     - [Notes](#Notes)
-    - [Future Plans](#Future-Plans)
 
 5. [Resources/Reference](#Resources/Reference)
 
@@ -127,34 +127,32 @@ Once the country codes in the geopandas dataframe matched those sourced from Mus
 [Back to top](#Contents)
 # Analysis
 
-## 
+## Artists per Country
+To get a sense of how skewed the analysis might be, I checked how many artists in the dataset were from each country. This plot ended up being so USA-skewed I had to use a log scale,
+![num artists per country](https://github.com/wkosmos/MusicalGeography/blob/master/images/artist%20count%20by%20country.png)
 
+## Danceability
+![danceability by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/danceability%20vs%20birthplace_1.png)
 
+## Energy
+![energy by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/energyvs%20birthplace.png)
 
-## Spotify Metrics
-spotify metrics by genre
-testing intuition of energy, danceability, valence:
-energy vs tempo, loudness
-danceability vs tempo, loudness, 
-valence vs tempo, loudness
-energy, valence, danceability vs each other
-
-
-## Artist Birthplace
-
-## Choice of compelling metrics
+## Valence
+![valence by birthplace](https://github.com/wkosmos/MusicalGeography/blob/master/images/valence%20vs%20birthplace_1.png)
 
 # Discussion
 
 ## Conclusion
+- All three of Spotify's subjective metrics appear to show association with the birthplace of the artist, and deeper investigation seems worthwhile.
 
 ## Notes
+- Artist birthplace is a flawed metric, in that it doesn't account for artists who have moved since birth, or for societal influences at a smaller than national level. This could be weighed a bit by getting data on what percentage of a country's population was born there.
+- Future interesting analyses could include investigation of the association of various cultural diasporas (esp. African) with Spotify's metrics
 
-## Future Plans
 
 
 ## Resources/References
-Data used in this analysis were sourced from:
+Data used in this analysis were sourced from:  
 **[Spotify API](https://gstudents.slack.com/archives/G015L65AESW/p1595461894242200)**
 - Musical data - tempo, popularity, acousticness, danceability, energy, instrumentalness, loudness, liveness, speechiness, valence
 
@@ -165,4 +163,5 @@ Data used in this analysis were sourced from:
 
 <br>
 
-**[COUNTRY CODES]**(https://gist.github.com/tadast/8827699)
+**[Country Codes]**(https://gist.github.com/tadast/8827699)
+- ISO Alpha-2 and ISO Alpha-3 country code matches
